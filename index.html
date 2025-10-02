@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI To-Do List API - Documentação</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+        .header { background-color: #2c3e50; color: #ecf0f1; padding: 1.5rem; text-align: center; border-radius: 8px 8px 0 0; }
+        .header h1 { font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+        .section { background-color: #ffffff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem; }
+        .section h2 { font-size: 2rem; font-weight: bold; color: #2c3e50; margin-bottom: 1rem; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }
+        .section h3 { font-size: 1.5rem; font-weight: bold; color: #34495e; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .code-block { background-color: #2d2d2d; color: #f8f8f2; padding: 1rem; border-radius: 5px; overflow-x: auto; margin-bottom: 1rem; }
+        .code-block pre { margin: 0; }
+        .badge { display: inline-block; padding: 0.25em 0.6em; font-size: 75%; font-weight: 700; line-height: 1; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25rem; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .badge-python { background-color: #306998; color: white; }
+        .badge-fastapi { background-color: #009688; color: white; }
+        .badge-license { background-color: #f39c12; color: white; }
+        .badge-status { background-color: #27ae60; color: white; }
+        .footer { text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.9rem; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
+        ol { list-style-type: decimal; margin-left: 1.5rem; margin-bottom: 1rem; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 FastAPI To-Do List API</h1>
+        <p>Documentação completa para gerenciamento de tarefas</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Sobre o Projeto</h2>
+            <p>Uma <strong>API RESTful completa</strong> desenvolvida com FastAPI para gerenciamento de tarefas (To-Do List). Este projeto foi criado como resposta ao <strong>#DesafioDaSemana</strong>, implementando todas as operações CRUD (Create, Read, Update, Delete) de forma profissional e eficiente.</p>
+            <p>A API oferece funcionalidades avançadas como filtragem por status e prioridade, paginação, estatísticas de tarefas e documentação interativa automática.</p>
+            <h3>Badges</h3>
+            <div>
+                <span class="badge badge-python">Python 3.11+</span>
+                <span class="badge badge-fastapi">FastAPI v.0.104</span>
+                <span class="badge badge-license">License MIT</span>
+                <span class="badge badge-status">Status Active</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li>✅ <strong>Criar tarefas</strong> com título, descrição, status e prioridade</li>
+                <li>📋 <strong>Listar todas as tarefas</strong> com filtros opcionais</li>
+                <li>🔍 <strong>Buscar tarefa específica</strong> por ID</li>
+                <li>✏️ <strong>Atualizar tarefas</strong> (parcial ou completa)</li>
+                <li>🗑️ <strong>Deletar tarefas</strong></li>
+                <li>📊 <strong>Estatísticas</strong> (total, concluídas, pendentes, taxa de conclusão)</li>
+                <li>🎯 <strong>Sistema de prioridades</strong> (baixa, média, alta)</li>
+                <li>🔄 <strong>Paginação</strong> para grandes volumes de dados</li>
+                <li>📚 <strong>Documentação interativa</strong> automática (Swagger UI e ReDoc)</li>
+                <li>🌐 <strong>CORS habilitado</strong> para integração com frontends</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Tecnologias Utilizadas</h2>
+            <ul>
+                <li><strong>FastAPI</strong>: Framework web moderno e de alta performance</li>
+                <li><strong>Pydantic</strong>: Validação de dados e serialização</li>
+                <li><strong>Uvicorn</strong>: Servidor ASGI de alta performance</li>
+                <li><strong>Python 3.11+</strong>: Linguagem de programação</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Pré-requisitos</h2>
+            <ul>
+                <li>Python 3.11 ou superior</li>
+                <li>pip (gerenciador de pacotes Python)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Como Executar Localmente</h2>
+            <h3>1. Clone o repositório</h3>
+            <div class="code-block"><pre><code>git clone https://github.com/galafis/fastapi-todo-api.git
+cd fastapi-todo-api</code></pre></div>
+
+            <h3>2. Crie um ambiente virtual (recomendado)</h3>
+            <div class="code-block"><pre><code>python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou
+virtual_env\Scripts\activate  # Windows</code></pre></div>
+
+            <h3>3. Instale as dependências</h3>
+            <div class="code-block"><pre><code>pip install -r requirements.txt</code></pre></div>
+
+            <h3>4. Execute a aplicação</h3>
+            <div class="code-block"><pre><code>uvicorn main:app --reload</code></pre></div>
+            <p>A API estará disponível em: <strong><a href="http://localhost:8000" target="_blank">http://localhost:8000</a></strong></p>
+        </div>
+
+        <div class="section">
+            <h2>Documentação da API</h2>
+            <p>Após iniciar o servidor, acesse:</p>
+            <ul>
+                <li><strong>Swagger UI (interativa)</strong>: <a href="http://localhost:8000/docs" target="_blank">http://localhost:8000/docs</a></li>
+                <li><strong>ReDoc (alternativa)</strong>: <a href="http://localhost:8000/redoc" target="_blank">http://localhost:8000/redoc</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Endpoints Disponíveis</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Endpoint</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>GET</code></td><td><code>/</code></td><td>Página inicial da API</td></tr>
+                    <tr><td><code>POST</code></td><td><code>/tasks</code></td><td>Criar nova tarefa</td></tr>
+                    <tr><td><code>GET</code></td><td><code>/tasks</code></td><td>Listar todas as tarefas</td></tr>
+                    <tr><td><code>GET</code></td><td><code>/tasks/{task_id}</code></td><td>Buscar tarefa específica</td></tr>
+                    <tr><td><code>PUT</code></td><td><code>/tasks/{task_id}</code></td><td>Atualizar tarefa</td></tr>
+                    <tr><td><code>DELETE</code></td><td><code>/tasks/{task_id}</code></td><td>Deletar tarefa</td></tr>
+                    <tr><td><code>GET</code></td><td><code>/tasks/stats/summary</code></td><td>Obter estatísticas</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Exemplos de Uso</h2>
+            <h3>Criar uma tarefa</h3>
+            <div class="code-block"><pre><code>curl -X POST "http://localhost:8000/tasks" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Estudar FastAPI",
+    "description": "Completar tutorial oficial",
+    "priority": "high",
+    "completed": false
+  }'</code></pre></div>
+
+            <h3>Listar todas as tarefas</h3>
+            <div class="code-block"><pre><code>curl -X GET "http://localhost:8000/tasks"</code></pre></div>
+
+            <h3>Listar tarefas pendentes de alta prioridade</h3>
+            <div class="code-block"><pre><code>curl -X GET "http://localhost:8000/tasks?completed=false&priority=high"</code></pre></div>
+
+            <h3>Atualizar uma tarefa</h3>
+            <div class="code-block"><pre><code>curl -X PUT "http://localhost:8000/tasks/{task_id}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "completed": true
+  }'</code></pre></div>
+
+            <h3>Deletar uma tarefa</h3>
+            <div class="code-block"><pre><code>curl -X DELETE "http://localhost:8000/tasks/{task_id}"</code></pre></div>
+
+            <h3>Obter estatísticas</h3>
+            <div class="code-block"><pre><code>curl -X GET "http://localhost:8000/tasks/stats/summary"</code></pre></div>
+        </div>
+
+        <div class="section">
+            <h2>Modelo de Dados</h2>
+            <h3>Task (Tarefa)</h3>
+            <div class="code-block"><pre><code>{
+  "id": "uuid-string",
+  "title": "Título da tarefa",
+  "description": "Descrição opcional",
+  "completed": false,
+  "priority": "medium",
+  "created_at": "2025-10-01T10:00:00",
+  "updated_at": "2025-10-01T10:00:00"
+}</code></pre></div>
+            <p><strong>Campos:</strong></p>
+            <ul>
+                <li><code>id</code> (string): Identificador único (UUID)</li>
+                <li><code>title</code> (string): Título da tarefa (obrigatório, 1-200 caracteres)</li>
+                <li><code>description</code> (string): Descrição detalhada (opcional, até 1000 caracteres)</li>
+                <li><code>completed</code> (boolean): Status de conclusão (padrão: false)</li>
+                <li><code>priority</code> (string): Prioridade - "low", "medium" ou "high" (padrão: "medium")</li>
+                <li><code>created_at</code> (datetime): Data/hora de criação</li>
+                <li><code>updated_at</code> (datetime): Data/hora da última atualização</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Melhorias Futuras</h2>
+            <ul>
+                <li>Persistência em banco de dados (PostgreSQL/MongoDB)</li>
+                <li>Autenticação e autorização (JWT)</li>
+                <li>Testes automatizados (pytest)</li>
+                <li>Sistema de tags para categorização</li>
+                <li>Datas de vencimento e lembretes</li>
+                <li>Dockerização da aplicação</li>
+                <li>Deploy em produção (Heroku/Railway/Render)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Licença</h2>
+            <p>Este projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/galafis/fastapi-todo-api/blob/main/LICENSE" target="_blank">LICENSE</a> para mais detalhes.</p>
+        </div>
+
+        <div class="section">
+            <h2>Autor</h2>
+            <p><strong>Gabriel Demetrios Lafis</strong></p>
+            <ul>
+                <li>GitHub: <a href="https://github.com/galafis" target="_blank">@galafis</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Contribuições</h2>
+            <p>Contribuições, issues e feature requests são bem-vindos!</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Gabriel Demetrios Lafis. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
