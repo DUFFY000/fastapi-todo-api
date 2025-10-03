@@ -1,5 +1,7 @@
 # 📝 FastAPI To-Do List API
 
+![FastAPI To-Do List Hero Image](/hero_image.png)
+
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -366,16 +368,16 @@ fastapi-todo-api/
 }
 ```
 
-**Fields:**
-- `id` (string): Unique identifier (UUID)
-- `title` (string): Task title (required, 1-200 characters)
-- `description` (string): Detailed description (optional, up to 1000 characters)
-- `completed` (boolean): Completion status (default: false)
-- `priority` (string): Priority - "low", "medium" or "high" (default: "medium")
-- `created_at` (datetime): Creation date/time
-- `updated_at` (datetime): Last update date/time
+**Campos:**
+- `id` (string): Identificador único (UUID)
+- `title` (string): Título da tarefa (obrigatório, 1-200 caracteres)
+- `description` (string): Descrição detalhada (opcional, até 1000 caracteres)
+- `completed` (boolean): Status de conclusão (padrão: false)
+- `priority` (string): Prioridade - "low", "medium" ou "high" (padrão: "medium")
+- `created_at` (datetime): Data/hora de criação
+- `updated_at` (datetime): Data/hora da última atualização
 
-### 🔮 Future Improvements
+### 🔮 Melhorias Futuras
 
 - [ ] Database persistence (PostgreSQL/MongoDB)
 - [ ] Authentication and authorization (JWT)
@@ -385,20 +387,21 @@ fastapi-todo-api/
 - [ ] Docker containerization
 - [ ] Production deployment (Heroku/Railway/Render)
 
-### 📝 License
+### 📝 Licença
 
 This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
-### 👤 Author
+### 👤 Autor
 
 **Gabriel Demetrios Lafis**
 
 - GitHub: [@gabriellafis](https://github.com/gabriellafis)
 
-### 🤝 Contributing
+### 🤝 Contribuições
 
-Contributions, issues, and feature requests are welcome!
+Contribuições, issues, and feature requests are welcome!
 
 ---
 
 ⭐ **If you liked this project, give it a star!** ⭐
+
